@@ -1,13 +1,11 @@
 import Button from "../components/Button";
 import Input from "../components/Input";
-import Board from "../components/Board";
-import TokenPicker from "../components/TokenPicker";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import React from "react";
 
 export default function Home() {
-  const [player1, setPlayer1] = useState("");
-  const [player2, setPlayer2] = useState("");
+  const [player1, setPlayer1] = useState("Player 1");
+  const [player2, setPlayer2] = useState("Player 2");
 
   return (
     <div className="flex flex-1 flex-col justify-evenly h-screen w-screen bg-gradient-to-br from-blue-500 to-lime-500 gap-8 p-2">
@@ -20,7 +18,7 @@ export default function Home() {
         <div className="border-3 border-emerald-400">
           <div className="flex border-3 border-black-500 gap-2 p-2 m-2 rounded">
             <label className="font-bold text-3xl ">Player 1: </label>
-            <Input value={player1} onChange={setPlayer1} autoFocus={true} />
+            <Input value={player1} onChange={setPlayer1} />
           </div>
           <div className="flex border-3 border-black-500 gap-2 p-2 m-2 rounded">
             <label className="flex items-center font-bold text-xl pb-4">
@@ -36,11 +34,9 @@ export default function Home() {
           </div>
           <div className="flex border-3 border-black-500 gap-2 p-2 m-2 rounded">
             <label className="flex items-center font-bold text-xl pb-4 ">
-              Selecciona tu ficha:{" "}
+              Selecciona tu ficha:{"  "}
             </label>
-            <Button>
-              
-            </Button>
+            <Button children="🦁" />
           </div>
         </div>
       </div>
